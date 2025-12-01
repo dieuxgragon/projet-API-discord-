@@ -1,9 +1,9 @@
 # views.py
 from django.http import JsonResponse
-from models import User, Serveur, Role, Membership, Message, gestionserveur, Demande, Amitier
+from .models import User, Serveur, Role, Membership, Message, gestionserveur, Demande, Amitier
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
-from serializer import UserSerializer, ServeurSerializer, RoleSerializer, MembershipSerializer, MessageSerializer, GestionserveurSerializer, DemandeSerializer, AmitierSerializer
+from .serializer import UserSerializer, ServeurSerializer, RoleSerializer, MembershipSerializer, MessageSerializer, GestionserveurSerializer, DemandeSerializer, AmitierSerializer
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
