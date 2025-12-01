@@ -17,5 +17,5 @@ urlpatterns = [
     path("api/messages/", views.api_message_list, name="api_message_list"),
     path("api/gestionservers/", views.api_gestionserver_list, name="api_gestionserver_list"),
     path("api/demandes/", views.api_demande_list, name="api_demande_list"),
-    path("api/friendship/", views.api_amitier_list, name="api_amitier_list"),
+    path("api/amitier/", views.api_amitier_list, name="api_amitier_list"),
 ]

@@ -58,7 +58,7 @@ class Demande(models.Model):
     statut = models.CharField(max_length=100)
     IDdemande = models.AutoField(primary_key=True)
 
-class Friendship(models.Model):
+class Amitier(models.Model):
     utilisateur1 = models.ForeignKey(User, related_name='utilisateur1', on_delete=models.CASCADE)
     utilisateur2 = models.ForeignKey(User, related_name='utilisateur2', on_delete=models.CASCADE)
     statut = models.BooleanField(default=False)

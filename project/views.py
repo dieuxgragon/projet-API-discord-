@@ -1,9 +1,9 @@
 # views.py
 from django.http import JsonResponse
-from .models import User, Server, Role, Membership, Message, gestionserver, Demande, Friendship
+from .models import User, Server, Role, Membership, Message, gestionserver, Demande, Amitier
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
-from .serializer import UserSerializer, ServerSerializer, RoleSerializer, MembershipSerializer, MessageSerializer, GestionserverSerializer, DemandeSerializer, FriendshipSerializer
+from .serializer import UserSerializer, ServerSerializer, RoleSerializer, MembershipSerializer, MessageSerializer, GestionserverSerializer, DemandeSerializer, AmitierSerializer
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
@@ -61,6 +61,6 @@ def api_demande_list(request):
 
 @api_view(['GET'])
 def api_amitier_list(request):  
-    friendship = Friendship.objects.all()
-    serializer = FriendshipSerializer(friendship, many=True)
+    amitier = Amitier.objects.all()
+    serializer = AmitierSerializer(amitier, many=True)
     return Response(serializer.data)

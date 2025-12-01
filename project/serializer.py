@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import User, Server, Role, Membership, Message, gestionserver, Demande, Friendship
+from .models import User, Server, Role, Membership, Message, gestionserver, Demande, Amitier
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -36,8 +36,8 @@ class DemandeSerializer(serializers.ModelSerializer):
         model = Demande
         fields = ['IDdemande', 'libelé', 'statut']
 
-class FriendshipSerializer(serializers.ModelSerializer):   
+class AmitierSerializer(serializers.ModelSerializer):   
     class Meta:
-        model = Friendship
+        model = Amitier
         fields = ['id', 'utilisateur1', 'utilisateur2', 'statut']
 
