@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from .models import User, Serveur, Role, Membership, Message, gestionserveur, Demande, Amitier
-from .serializer import UserSerializer, ServeurSerializer, RoleSerializer, MembershipSerializer, MessageSerializer, GestionserveurSerializer, DemandeSerializer, AmitierSerializer      
+from .models import User, Serveur, Role, Membership, Message, gestionserveur, Demande, Friendship
+from .serializer import UserSerializer, ServeurSerializer, RoleSerializer, MembershipSerializer, MessageSerializer, GestionserveurSerializer, DemandeSerializer, FriendshipSerializer      
 from rest_framework.permissions import IsAuthenticated
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -38,8 +38,8 @@ class DemandeViewSet(viewsets.ModelViewSet):
     serializer_class = DemandeSerializer
     # permission_classes = [IsAuthenticated]
 
-class AmitierViewSet(viewsets.ModelViewSet):
-    queryset = Amitier.objects.all()
-    serializer_class = AmitierSerializer
+class FriendshipViewSet(viewsets.ModelViewSet):
+    queryset = Friendship.objects.all()
+    serializer_class = FriendshipSerializer
     # permission_classes = [IsAuthenticated]
 

@@ -1,5 +1,5 @@
 from django.urls import path
-from rest_framework.views import TokenObtainPairView, TokenRefreshView
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from . import views
 
 urlpatterns = [
@@ -17,5 +17,5 @@ urlpatterns = [
     path("api/messages/", views.api_message_list, name="api_message_list"),
     path("api/gestionserveurs/", views.api_gestionserveur_list, name="api_gestionserveur_list"),
     path("api/demandes/", views.api_demande_list, name="api_demande_list"),
-    path("api/amities/", views.api_amitier_list, name="api_amitier_list"),
+    path("api/friendship/", views.api_amitier_list, name="api_amitier_list"),
 ]
