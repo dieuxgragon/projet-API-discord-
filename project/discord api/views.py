@@ -13,9 +13,9 @@ def api_user_list(request):
     serializer = UserSerializer(users, many=True)
     return Response(serializer.data)
 
-@login_required
-def dashboard(request):
-    return HttpResponse("Welcome to your dashboard!")
+#@login_required
+#def dashboard(request):
+    #return HttpResponse("Welcome to your dashboard!")
 
 @api_view(['GET'])
 def user_list(request):
