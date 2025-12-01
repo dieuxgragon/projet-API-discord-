@@ -8,29 +8,29 @@ class User(models.Model):
     motsdepasse = models.CharField(max_length=100)
     IDuser = models.AutoField(primary_key=True)
 
-class Serveur(models.Model):
+class Server(models.Model):
     nom = models.CharField(max_length=100)
     Permission = models.TextField()
-    IDserveur = models.AutoField(primary_key=True)
+    IDserver = models.AutoField(primary_key=True)
 
     def __str__(self):
         return self.nom
     
 class Role(models.Model):
     nom = models.CharField(max_length=100)
-    serveur = models.ForeignKey(Serveur, related_name="roles", on_delete=models.CASCADE)
+    server = models.ForeignKey(Server, related_name="roles", on_delete=models.CASCADE)
     can_manage_roles = models.BooleanField(default=False)
     can_delete_messages = models.BooleanField(default=False)
 
     class Meta:
-        unique_together = ("nom", "serveur")
+        unique_together = ("nom", "server")
 
     def __str__(self):
-        return f"{self.nom} @ {self.serveur.nom}"
+        return f"{self.nom} @ {self.server.nom}"
     
 class Membership(models.Model):
     user = models.ForeignKey(User, related_name="memberships", on_delete=models.CASCADE)
-    serveur = models.ForeignKey(Serveur, related_name="members", on_delete=models.CASCADE)
+    server = models.ForeignKey(Server, related_name="members", on_delete=models.CASCADE)
     roles = models.ManyToManyField(Role, related_name="members", blank=True)
     joined_at = models.DateTimeField(default=timezone.now)
 
@@ -41,7 +41,7 @@ class Membership(models.Model):
         return f"{self.user.nom} in {self.server.nom}"
 
 class Message(models.Model):
-    server = models.ForeignKey(Serveur, related_name="messages", on_delete=models.CASCADE)
+    server = models.ForeignKey(Server, related_name="messages", on_delete=models.CASCADE)
     author = models.ForeignKey(User, related_name="messages", on_delete=models.CASCADE)
     content = models.TextField()
     created_at = models.DateTimeField(default=timezone.now)
@@ -49,9 +49,9 @@ class Message(models.Model):
     class Meta:
         ordering = ["created_at"]
 
-class gestionserveur(models.Model):
+class gestionserver(models.Model):
     idutilisateur = models.ForeignKey(User, on_delete=models.CASCADE)
-    idserveur = models.ForeignKey(Serveur, on_delete=models.CASCADE)
+    idserver = models.ForeignKey(Server, on_delete=models.CASCADE)
 
 class Demande(models.Model):
     libelé = models.CharField(max_length=100)

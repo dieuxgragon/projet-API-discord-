@@ -1,35 +1,35 @@
 from rest_framework import serializers
-from .models import User, Serveur, Role, Membership, Message, gestionserveur, Demande, Friendship
+from .models import User, Server, Role, Membership, Message, gestionserver, Demande, Friendship
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'nom', 'email']
 
-class ServeurSerializer(serializers.ModelSerializer):
+class ServerSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Serveur
-        fields = ['IDserveur', 'nom', 'Permission']
+        model = Server
+        fields = ['IDserver', 'nom', 'Permission']
 
 class RoleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Role
-        fields = ['id', 'nom', 'serveur', 'can_manage_roles', 'can_delete_messages']
+        fields = ['id', 'nom', 'server', 'can_manage_roles', 'can_delete_messages']
 
 class MembershipSerializer(serializers.ModelSerializer):    
     class Meta:
         model = Membership
-        fields = ['id', 'user', 'serveur', 'roles', 'joined_at']
+        fields = ['id', 'user', 'server', 'roles', 'joined_at']
 
 class MessageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Message
         fields = ['id', 'server', 'author', 'content', 'created_at']
 
-class GestionserveurSerializer(serializers.ModelSerializer):
+class GestionserverSerializer(serializers.ModelSerializer):
     class Meta:
-        model = gestionserveur
-        fields = ['id', 'idutilisateur', 'idserveur']   
+        model = gestionserver
+        fields = ['id', 'idutilisateur', 'idserver']   
 
 class DemandeSerializer(serializers.ModelSerializer):
     class Meta:

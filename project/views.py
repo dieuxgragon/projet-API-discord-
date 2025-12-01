@@ -1,9 +1,9 @@
 # views.py
 from django.http import JsonResponse
-from .models import User, Serveur, Role, Membership, Message, gestionserveur, Demande, Friendship
+from .models import User, Server, Role, Membership, Message, gestionserver, Demande, Friendship
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
-from .serializer import UserSerializer, ServeurSerializer, RoleSerializer, MembershipSerializer, MessageSerializer, GestionserveurSerializer, DemandeSerializer, FriendshipSerializer
+from .serializer import UserSerializer, ServerSerializer, RoleSerializer, MembershipSerializer, MessageSerializer, GestionserverSerializer, DemandeSerializer, FriendshipSerializer
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
@@ -24,9 +24,9 @@ def user_list(request):
     return JsonResponse(list(users), safe=False)
 
 @api_view(['GET'])
-def api_serveur_list(request):  
-    serveurs = Serveur.objects.all()
-    serializer = ServeurSerializer(serveurs, many=True)
+def api_server_list(request):  
+    servers = Server.objects.all()
+    serializer = ServerSerializer(servers, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
@@ -48,9 +48,9 @@ def api_message_list(request):
     return Response(serializer.data)
 
 @api_view(['GET'])
-def api_gestionserveur_list(request):  
-    gestionserveurs = gestionserveur.objects.all()
-    serializer = GestionserveurSerializer(gestionserveurs, many=True)
+def api_gestionserver_list(request):  
+    gestionservers = gestionserver.objects.all()
+    serializer = GestionserverSerializer(gestionservers, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
@@ -64,4 +64,3 @@ def api_amitier_list(request):
     friendship = Friendship.objects.all()
     serializer = FriendshipSerializer(friendship, many=True)
     return Response(serializer.data)
-
