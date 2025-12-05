@@ -1,0 +1,297 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: API_Discord
+meta:
+  id: wrk_aeba4e9ad58d4ad39caacd6c4d2f2b50
+  created: 1760947079316
+  modified: 1764603270167
+  description: ""
+collection:
+  - url: http://localhost:8000/api/users/
+    name: New Request
+    meta:
+      id: req_6169dc13ef74447288558cf845bd923b
+      created: 1764603296060
+      modified: 1764924433400
+      isPrivate: false
+      description: ""
+      sortKey: -1764603296060
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/dashboard/
+    name: Dashboard
+    meta:
+      id: req_253bdbe107bb4fad9ec752d987b4668b
+      created: 1764923808448
+      modified: 1764926085924
+      isPrivate: false
+      description: ""
+      sortKey: -1764923808449
+    method: GET
+    parameters:
+      - name: name
+        value: toto2
+        description: ""
+        disabled: true
+      - name: datedenaissance
+        value: 2024-04-10
+        description: ""
+        disabled: true
+      - name: pseudo
+        value: toto2
+        description: ""
+        disabled: true
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/users/simple/
+    name: users/simple/
+    meta:
+      id: req_159d5bee4390403bb0a3b7339ab7fed1
+      created: 1764925476129
+      modified: 1764926085924
+      isPrivate: false
+      description: ""
+      sortKey: -1764925476129
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/api/users/
+    name: api/users/
+    meta:
+      id: req_ef5d5664bd0b42e9aa9512fd3f5cc7fa
+      created: 1764925546626
+      modified: 1764926085924
+      isPrivate: false
+      description: ""
+      sortKey: -1764925546626
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/api/servers/
+    name: /api/servers/
+    meta:
+      id: req_a028e28e876c4765bac8645557ed7641
+      created: 1764925589568
+      modified: 1764926085924
+      isPrivate: false
+      description: ""
+      sortKey: -1764925589568
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/api/roles/
+    name: /api/roles/
+    meta:
+      id: req_e82bf6752133436d930533ff34abff09
+      created: 1764925622455
+      modified: 1764926085924
+      isPrivate: false
+      description: ""
+      sortKey: -1764925622455
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/api/memberships/
+    name: /api/memberships/
+    meta:
+      id: req_684ec183c98c4c1993cb37547ee89a58
+      created: 1764925664808
+      modified: 1764926085924
+      isPrivate: false
+      description: ""
+      sortKey: -1764925664808
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/api/messages/
+    name: /api/messages/
+    meta:
+      id: req_93ab99b7f47e46069faa1389b4aba3f9
+      created: 1764925705386
+      modified: 1764926085924
+      isPrivate: false
+      description: ""
+      sortKey: -1764925705386
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/api/gestionservers/
+    name: /api/gestionservers/
+    meta:
+      id: req_fca6b823477349cdac2c85526c9e2663
+      created: 1764925745221
+      modified: 1764926085924
+      isPrivate: false
+      description: ""
+      sortKey: -1764925745221
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/api/demandes/
+    name: /api/demandes/
+    meta:
+      id: req_c125aff3b7474ef6a9f9fe6505c148bd
+      created: 1764925791100
+      modified: 1764926085924
+      isPrivate: false
+      description: ""
+      sortKey: -1764925791100
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://127.0.0.1:8000/api/amitier/
+    name: /api/amitier/
+    meta:
+      id: req_9cc6b0ab170646e68f441dd68bf5b3e0
+      created: 1764925831493
+      modified: 1764926085924
+      isPrivate: false
+      description: ""
+      sortKey: -1764925831493
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_86390bae97e451ecca1cdb061fc29d75c6dea3e9
+    created: 1764602759660
+    modified: 1764923828076
+  cookies:
+    - id: 6362bfe0-0d84-4400-a0e5-a0c62a534420
+      key: csrftoken
+      value: OEvaWHzABEqPpZL4E2iKdbUZ4VI6IPbw
+      domain: localhost
+      path: /
+      secure: false
+      httpOnly: false
+      hostOnly: true
+environments:
+  name: Base Environment
+  meta:
+    id: env_86390bae97e451ecca1cdb061fc29d75c6dea3e9
+    created: 1760947079319
+    modified: 1764602759603
+    isPrivate: false
