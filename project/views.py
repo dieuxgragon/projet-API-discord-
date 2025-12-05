@@ -1,4 +1,4 @@
-# views.py
+
 from django.http import JsonResponse
 from .models import User, Server, Role, Membership, Message, gestionserver, Demande, Amitier
 from django.contrib.auth.decorators import login_required
@@ -7,7 +7,6 @@ from .serializer import UserSerializer, ServerSerializer, RoleSerializer, Member
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
-
 
 @api_view(['GET'])
 def api_user_list(request):
@@ -19,7 +18,7 @@ def api_user_list(request):
 def dashboard(request):
     return HttpResponse("Welcome to your dashboard!")
 
-@api_view(['GET'])
+@api_view(['GET', 'POST'])
 def user_list(request):
     users = User.objects.all().values('name', 'datedenaissance', 'pseudo')
     return JsonResponse(list(users), safe=False)
