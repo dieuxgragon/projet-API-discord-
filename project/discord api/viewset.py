@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from .models import User, Server, Role, Membership, Message, gestionserver, Demande, Amitier
-from .serializer import UserSerializer, ServerSerializer, RoleSerializer, MembershipSerializer, MessageSerializer, GestionserverSerializer, DemandeSerializer, AmitierSerializer      
+from ..models import User, Server, Role, Membership, Message, gestionserver, Demande, Amitier
+from ..serializer import UserSerializer, ServerSerializer, RoleSerializer, MembershipSerializer, MessageSerializer, GestionserverSerializer, DemandeSerializer, AmitierSerializer      
 from rest_framework.permissions import IsAuthenticated
 
 class UserViewSet(viewsets.ModelViewSet):

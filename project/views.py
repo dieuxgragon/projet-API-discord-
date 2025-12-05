@@ -8,6 +8,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
+
 @api_view(['GET'])
 def api_user_list(request):
     users = User.objects.all()
