@@ -63,7 +63,6 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        # On dit à Django d'utiliser le fichier à la racine
         'NAME': BASE_DIR / 'apiDiscord.sqlite3',
     }
 }
@@ -102,3 +101,5 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
+
+LOGIN_URL = '/admin/login/'
