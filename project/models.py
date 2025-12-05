@@ -38,7 +38,7 @@ class Membership(models.Model):
         unique_together = ("user", "server")
 
     def __str__(self):
-        return f"{self.user.nom} in {self.server.nom}"
+        return f"{self.user.name} in {self.server.nom}"
 
 class Message(models.Model):
     server = models.ForeignKey(Server, related_name="messages", on_delete=models.CASCADE)
