@@ -8,5 +8,5 @@ py manage.py runserver
 un lien cliquable apparaitra dans votre cmd pour allez sur le site sinon allez sur 
 http://127.0.0.1:8000
 
-si vous voulez tester le site sur insomnia/postman/swagger 
-lancer le site avant 
+si vous voulez tester le site sur insomnia, postman ou swagger 
+lancer le site avant de faire les test 
